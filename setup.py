@@ -8,9 +8,10 @@ setup(
     long_description=open('README.md').read(),
     test_suite='nose.collector',
     tests_require=['nose'],
-    install_requires=['requests','nose','requests-mock[fixture]','testtools'],
+    install_requires=['requests','nose','requests-mock[fixture]','testtools','twine'],
     url='https://github.com/atveit/amplitude-python',
     author='Amund Tveit',
+    author_email='atveit@gmail.com',
     license='Apache License 2.0',
     classifiers=[
         'Development Status :: 3 - Alpha',
