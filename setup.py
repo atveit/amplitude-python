@@ -3,9 +3,9 @@ from setuptools import setup, find_packages
 setup(
     name='amplitude-python',
     keywords='python wrapper for amplitude.com HTTP API',
-    version='0.1',
+    version='0.11',
     packages=find_packages(),
-    long_description=open('README.md').read(),
+    long_description=open('README.html').read(),
     test_suite='nose.collector',
     tests_require=['nose'],
     install_requires=['requests','nose','requests-mock[fixture]','testtools','twine'],

@@ -1,0 +1,32 @@
+<p><a href="https://circleci.com/gh/atveit/amplitude-python"><img src="https://circleci.com/gh/atveit/amplitude-python.svg?style=svg&amp;circle-token=dfb7391f33d23ac3dad467b60ca34b36e7a37ebb" alt="CircleCI"></a></p>
+<h1 id="amplitude-python">amplitude-python</h1>
+<p>Python API for Amplitude Analytics Logging - <a href="https://amplitude.com">https://amplitude.com</a></p>
+<p>This API is a simple (unofficial) wrapper for the <a href="https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API">Amplitude HTTP API</a></p>
+<h2 id="1-install-amplitude-python">1. Install amplitude-python</h2>
+<p>Potential preparation before installing: create and activate virtualenv or conda environment</p>
+<h3 id="1-1-install-from-pypi-with-conda-or-pip">1.1 Install from pypi with conda or pip</h3>
+<pre><code class="lang-bash">pip install amplitude-python
+</code></pre>
+<h3 id="1-2-install-from-github">1.2 Install from github</h3>
+<pre><code class="lang-bash">$ git clone https://github.com/atveit/amplitude-python.git
+$ cd amplitude-python
+$ python setup.py instal
+</code></pre>
+<h2 id="2-logging-to-amplitude-with-amplitude-python">2. Logging to Amplitude with amplitude-python</h2>
+<p>Recommend having a look at <a href="https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API">Amplitude HTTP API Documentation</a> before start logging.</p>
+<pre><code class="lang-python">import amplitude    
+
+# initialize amplitude logger
+amplitude_logger = amplitude.AmplitudeLogger(api_key = &quot;SOME_API_KEY_STRING&quot;)
+
+# example event
+event_args = {&quot;device_id&quot;:&quot;somedeviceid&quot;, &quot;event_type&quot;:&quot;justtesting&quot;, 
+              &quot;event_properties&quot;:{&quot;property1&quot;:&quot;somevalue&quot;, &quot;propertyN&quot;:&quot;anothervalue&quot;}
+event = amplitude_logger.create_event(**event_args)
+
+# send event to amplitude
+amplitude_logger.log_event(event)
+</code></pre>
+<h2 id="3-test-amplitude-python-module">3. Test amplitude-python module</h2>
+<pre><code>python setup.py test
+</code></pre>
