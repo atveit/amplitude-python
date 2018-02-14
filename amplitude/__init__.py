@@ -66,7 +66,7 @@ class AmplitudeLogger:
 
 
 #data = [
-#  ('api_key', '497b2e34ece51143591ffe9272327164'),
+#  ('api_key', 'SOMETHINGSOMETHING'),
 #  ('event', '[{"device_id":"foo@bar", "event_type":"testing_tutorial", "user_properties":{"Cohort":"Test A"}, "country":"United States", "ip":"127.0.0.1", "time":1396381378123}]'),
 #]
 
