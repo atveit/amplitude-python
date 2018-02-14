@@ -58,7 +58,7 @@ class AmplitudeLogger:
             ('event', json.dumps([event])),
             ]
 
-        print(event_package)
+        #print(event_package)
 
         # ++ many other properties
         # details: https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API
